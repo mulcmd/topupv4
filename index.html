@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RFM STORE - Top Up Game Instan & Terpercaya</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter & Orbitron -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Orbitron:wght@600;800;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0b0f19',
+                            card: '#151c2c',
+                            border: '#2a364f',
+                            cyan: '#06b6d4',
+                            purple: '#8b5cf6',
+                            accent: '#3b82f6',
+                            neon: '#00f0ff'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Orbitron', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #0b0f19;
+            color: #f3f4f6;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0b0f19;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e293b;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #06b6d4;
+        }
+
+        /* Neon Glow Effects */
+        .neon-glow-cyan {
+            box-shadow: 0 0 15px rgba(6, 182, 212, 0.4);
+        }
+        .neon-glow-purple {
+            box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
+        }
+        .text-glow {
+            text-shadow: 0 0 8px rgba(6, 182, 212, 0.6);
+        }
+        
+        /* Smooth Scale Transition */
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(6, 182, 212, 0.25);
+        }
+
+        /* Custom Input Outline */
+        .input-glow:focus {
+            outline: none;
+            border-color: #06b6d4;
+            box-shadow: 0 0 10px rgba(6, 182, 212, 0.3);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-cyan-500 selection:text-white">
+
+    <!-- HEADER & NAVBAR -->
+    <header class="sticky top-0 z-40 bg-brand-dark/90 backdrop-blur-md border-b border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo -->
+                <div class="flex items-center gap-3 cursor-pointer" onclick="switchTab('home')">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 to-purple-600 flex items-center justify-center font-display font-black text-xl text-white shadow-lg shadow-cyan-500/30">
+                        RF
+                    </div>
+                    <span class="font-display font-extrabold text-2xl tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-500 text-glow">
+                        RFM<span class="text-white font-normal text-lg ml-1">STORE</span>
+                    </span>
+                </div>
+
+                <!-- Desktop Search Bar -->
+                <div class="hidden md:block flex-1 max-w-md mx-8">
+                    <div class="relative">
+                        <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                        <input type="text" id="searchInputDesktop" oninput="filterGames(this.value)" placeholder="Cari Game favoritmu... (e.g. Mobile Legends)" 
+                            class="w-full bg-brand-card/80 border border-brand-border rounded-full py-2.5 pl-11 pr-4 text-sm text-gray-200 placeholder-gray-400 input-glow transition-all">
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden lg:flex items-center space-x-6">
+                    <button onclick="switchTab('home')" class="nav-btn text-cyan-400 font-semibold text-sm hover:text-cyan-300 transition flex items-center gap-2">
+                        <i class="fa-solid fa-house"></i> Beranda
+                    </button>
+                    <button onclick="switchTab('cek-transaksi')" class="nav-btn text-gray-300 hover:text-cyan-400 font-medium text-sm transition flex items-center gap-2">
+                        <i class="fa-solid fa-receipt"></i> Cek Transaksi
+                    </button>
+                    <button onclick="switchTab('promo')" class="nav-btn text-gray-300 hover:text-cyan-400 font-medium text-sm transition flex items-center gap-2">
+                        <i class="fa-solid fa-fire"></i> Promo Hot
+                    </button>
+                    <a href="https://wa.me/6281234567890?text=Halo%20Admin%20RFM%20STORE,%20saya%20butuh%20bantuan" target="_blank" class="px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold text-sm shadow-md shadow-cyan-500/20 transition flex items-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> CS Support
+                    </a>
+                </nav>
+
+                <!-- Mobile Navigation Toggle Button -->
+                <div class="flex lg:hidden items-center gap-3">
+                    <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="text-gray-300 hover:text-white p-2 text-xl">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Search Bar (Below Header) -->
+        <div class="md:hidden px-4 pb-4">
+            <div class="relative">
+                <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                <input type="text" id="searchInputMobile" oninput="filterGames(this.value)" placeholder="Cari Game favoritmu..." 
+                    class="w-full bg-brand-card/90 border border-brand-border rounded-full py-2 pl-11 pr-4 text-sm text-gray-200 placeholder-gray-400 input-glow">
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-brand-card border-b border-brand-border px-4 pt-2 pb-4 space-y-3">
+            <button onclick="switchTab('home'); toggleMobileMenu()" class="w-full text-left py-2 px-3 rounded-lg hover:bg-brand-border/50 text-cyan-400 font-medium flex items-center gap-3">
+                <i class="fa-solid fa-house w-5"></i> Beranda
+            </button>
+            <button onclick="switchTab('cek-transaksi'); toggleMobileMenu()" class="w-full text-left py-2 px-3 rounded-lg hover:bg-brand-border/50 text-gray-300 flex items-center gap-3">
+                <i class="fa-solid fa-receipt w-5"></i> Cek Transaksi
+            </button>
+            <button onclick="switchTab('promo'); toggleMobileMenu()" class="w-full text-left py-2 px-3 rounded-lg hover:bg-brand-border/50 text-gray-300 flex items-center gap-3">
+                <i class="fa-solid fa-fire w-5"></i> Promo Hot
+            </button>
+            <a href="https://wa.me/6281234567890?text=Halo%20Admin%20RFM%20STORE" target="_blank" class="w-full text-left py-2 px-3 rounded-lg bg-green-600/20 text-green-400 font-medium flex items-center gap-3">
+                <i class="fa-brands fa-whatsapp w-5 text-lg"></i> Customer Support WhatsApp
+            </a>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT AREA -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6">
+
+        <!-- TAB 1: HOME PAGE -->
+        <div id="tab-home" class="tab-content space-y-8">
+            
+            <!-- Hero Promo Banner Carousel -->
+            <section class="relative rounded-2xl overflow-hidden border border-brand-border bg-brand-card shadow-2xl">
+                <div id="carouselSlides" class="relative h-48 sm:h-64 md:h-80 w-full overflow-hidden">
+                    
+                    <!-- Slide 1 -->
+                    <div class="carousel-item absolute inset-0 transition-opacity duration-700 opacity-100 bg-gradient-to-r from-purple-900/80 via-slate-900/90 to-cyan-900/80 flex items-center px-6 sm:px-12">
+                        <div class="max-w-xl z-10 space-y-3">
+                            <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 text-xs font-bold rounded-full uppercase tracking-widest">PROMO FLASH SALE</span>
+                            <h2 class="text-2xl sm:text-4xl font-extrabold text-white font-display leading-tight">Mobile Legends Weekly Pass Discount 20%</h2>
+                            <p class="text-xs sm:text-sm text-gray-300">Proses instan 1 detik langsung masuk ke akun Mobile Legends kamu!</p>
+                            <button onclick="openTopupModal('mlbb')" class="mt-2 inline-flex items-center gap-2 px-5 py-2.5 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-sm rounded-xl transition transform hover:scale-105 shadow-lg shadow-cyan-500/30">
+                                Topup Sekarang <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                        <i class="fa-solid fa-gamepad absolute -right-6 -bottom-10 text-9xl text-cyan-500/10 pointer-events-none"></i>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="carousel-item absolute inset-0 transition-opacity duration-700 opacity-0 bg-gradient-to-r from-blue-900/80 via-slate-900/90 to-red-900/80 flex items-center px-6 sm:px-12">
+                        <div class="max-w-xl z-10 space-y-3">
+                            <span class="px-3 py-1 bg-red-500/20 text-red-400 border border-red-500/30 text-xs font-bold rounded-full uppercase tracking-widest">FREE FIRE EVENT</span>
+                            <h2 class="text-2xl sm:text-4xl font-extrabold text-white font-display leading-tight">Bonus Diamond Free Fire s/d 100%</h2>
+                            <p class="text-xs sm:text-sm text-gray-300">Dapatkan bonus diamond melimpah untuk semua nominal topup hari ini!</p>
+                            <button onclick="openTopupModal('ff')" class="mt-2 inline-flex items-center gap-2 px-5 py-2.5 bg-red-500 hover:bg-red-400 text-white font-bold text-sm rounded-xl transition transform hover:scale-105 shadow-lg shadow-red-500/30">
+                                Klaim Bonus <i class="fa-solid fa-fire"></i>
+                            </button>
+                        </div>
+                        <i class="fa-solid fa-fire-flame-curved absolute -right-6 -bottom-10 text-9xl text-red-500/10 pointer-events-none"></i>
+                    </div>
+
+                </div>
+
+                <!-- Carousel Controls -->
+                <button onclick="prevSlide()" class="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-slate-900/60 border border-gray-600 text-white flex items-center justify-center hover:bg-cyan-500 hover:border-cyan-500 transition">
+                    <i class="fa-solid fa-chevron-left text-xs"></i>
+                </button>
+                <button onclick="nextSlide()" class="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-slate-900/60 border border-gray-600 text-white flex items-center justify-center hover:bg-cyan-500 hover:border-cyan-500 transition">
+                    <i class="fa-solid fa-chevron-right text-xs"></i>
+                </button>
+            </section>
+
+            <!-- Instant Guarantee Features -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="bg-brand-card/60 border border-brand-border p-4 rounded-xl flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-lg bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold text-gray-200">Proses Instan</h4>
+                        <p class="text-[11px] text-gray-400">Otomatis 1 - 3 Detik</p>
+                    </div>
+                </div>
+                <div class="bg-brand-card/60 border border-brand-border p-4 rounded-xl flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-lg bg-purple-500/10 text-purple-400 flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold text-gray-200">100% Legal</h4>
+                        <p class="text-[11px] text-gray-400">Garansi Akun Aman</p>
+                    </div>
+                </div>
+                <div class="bg-brand-card/60 border border-brand-border p-4 rounded-xl flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold text-gray-200">Layanan CS 24/7</h4>
+                        <p class="text-[11px] text-gray-400">Bantuan Fast Respon</p>
+                    </div>
+                </div>
+                <div class="bg-brand-card/60 border border-brand-border p-4 rounded-xl flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl">
+                        <i class="fa-solid fa-wallet"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold text-gray-200">Metode Lengkap</h4>
+                        <p class="text-[11px] text-gray-400">QRIS, E-Wallet & VA</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION POPULAR GAMES -->
+            <section class="space-y-4">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-2">
+                        <div class="w-2 h-6 bg-cyan-500 rounded-full"></div>
+                        <h3 class="text-xl font-bold text-white font-display tracking-wide">POPULER GAME</h3>
+                    </div>
+                    <span class="text-xs text-gray-400">Pilih game favoritmu untuk top up</span>
+                </div>
+
+                <!-- Game Grid -->
+                <div id="gameGrid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                    <!-- Cards via JS -->
+                </div>
+            </section>
+        </div>
+
+        <!-- TAB 2: CEK TRANSAKSI -->
+        <div id="tab-cek-transaksi" class="tab-content hidden space-y-6 max-w-2xl mx-auto py-8">
+            <div class="bg-brand-card border border-brand-border rounded-2xl p-6 sm:p-8 shadow-xl">
+                <div class="text-center space-y-2 mb-6">
+                    <div class="w-14 h-14 bg-cyan-500/10 border border-cyan-500/30 rounded-2xl text-cyan-400 flex items-center justify-center mx-auto text-2xl">
+                        <i class="fa-solid fa-magnifying-glass font-bold"></i>
+                    </div>
+                    <h2 class="text-2xl font-bold text-white font-display">Lacak Pesanan Kamu</h2>
+                    <p class="text-sm text-gray-400">Masukkan Invoice ID transaksi yang telah diberikan saat pemesanan.</p>
+                </div>
+
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-2">Invoice ID / No. Transaksi</label>
+                        <input type="text" id="invoiceCheckInput" placeholder="Contoh: RFM-20261019-XXXX" 
+                            class="w-full bg-brand-dark border border-brand-border rounded-xl px-4 py-3 text-white text-sm input-glow uppercase">
+                    </div>
+                    <button onclick="checkInvoiceStatus()" class="w-full py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold rounded-xl shadow-lg shadow-cyan-500/20 transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-search"></i> Cek Status Pesanan
+                    </button>
+                </div>
+
+                <!-- Result Area -->
+                <div id="invoiceResultArea" class="mt-6 hidden">
+                    <!-- Status dynamic content -->
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 3: PROMO -->
+        <div id="tab-promo" class="tab-content hidden space-y-6">
+            <div class="flex items-center gap-2 mb-4">
+                <div class="w-2 h-6 bg-purple-500 rounded-full"></div>
+                <h3 class="text-xl font-bold text-white font-display tracking-wide">PROMO & DISKON SPESIAL</h3>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Promo Card 1 -->
+                <div class="bg-brand-card border border-brand-border rounded-2xl p-6 flex flex-col justify-between space-y-4 relative overflow-hidden group">
+                    <div class="space-y-2">
+                        <span class="px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-bold rounded-full border border-purple-500/30">DISKON 25%</span>
+                        <h4 class="text-lg font-bold text-white">Promo Akhir Bulan Mobile Legends</h4>
+                        <p class="text-sm text-gray-400">Dapatkan diskon potongan harga langsung hingga Rp 25.000 untuk pembelian Starlight Member & 86 Diamonds keatas.</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-4 border-t border-brand-border/50">
+                        <span class="text-xs text-gray-500">Kode Voucher: <strong class="text-cyan-400">RFMMLBB25</strong></span>
+                        <button onclick="openTopupModal('mlbb')" class="px-4 py-2 bg-purple-600 hover:bg-purple-500 text-white text-xs font-bold rounded-lg transition">Gunakan Promo</button>
+                    </div>
+                </div>
+
+                <!-- Promo Card 2 -->
+                <div class="bg-brand-card border border-brand-border rounded-2xl p-6 flex flex-col justify-between space-y-4 relative overflow-hidden group">
+                    <div class="space-y-2">
+                        <span class="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-bold rounded-full border border-cyan-500/30">CASHBACK QRIS</span>
+                        <h4 class="text-lg font-bold text-white">Cashback 5% Pembayaran via QRIS All Game</h4>
+                        <p class="text-sm text-gray-400">Gunakan metode pembayaran QRIS tanpa minimum transaksi dan dapatkan pemrosesan kilat 1 detik.</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-4 border-t border-brand-border/50">
+                        <span class="text-xs text-gray-500">Berlaku s/d: <strong class="text-gray-300"> Akhir Bulan</strong></span>
+                        <button onclick="switchTab('home')" class="px-4 py-2 bg-cyan-600 hover:bg-cyan-500 text-white text-xs font-bold rounded-lg transition">Pilih Game</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- TOPUP MODAL (WORKFLOW WORKFLOW 5 STEP) -->
+    <div id="topupModal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm overflow-y-auto flex items-center justify-center p-3 sm:p-4">
+        <div class="bg-brand-card border border-brand-border rounded-2xl max-w-3xl w-full max-h-[92vh] overflow-y-auto shadow-2xl relative flex flex-col">
+            
+            <!-- Modal Header -->
+            <div class="sticky top-0 bg-brand-card/95 backdrop-blur border-b border-brand-border p-4 sm:p-5 z-20 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div id="modalGameIcon" class="w-12 h-12 rounded-xl bg-slate-800 border border-brand-border flex items-center justify-center text-2xl text-cyan-400 font-bold overflow-hidden">
+                        <!-- Icon JS -->
+                    </div>
+                    <div>
+                        <h3 id="modalGameTitle" class="text-lg font-bold text-white font-display">Nama Game</h3>
+                        <p id="modalGamePublisher" class="text-xs text-cyan-400">Publisher Game</p>
+                    </div>
+                </div>
+                <button onclick="closeTopupModal()" class="w-9 h-9 rounded-full bg-slate-800 text-gray-400 hover:text-white hover:bg-red-500/20 transition flex items-center justify-center">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <!-- Modal Content (Step Form) -->
+            <div class="p-4 sm:p-6 space-y-6 flex-grow">
+                
+                <!-- STEP 1: INPUT DATA AKUN -->
+                <div class="space-y-3">
+                    <div class="flex items-center gap-2">
+                        <span class="w-6 h-6 rounded-full bg-cyan-500 text-slate-950 font-bold text-xs flex items-center justify-center">1</span>
+                        <h4 class="text-sm font-bold text-white uppercase tracking-wider">Masukkan Data Akun</h4>
+                    </div>
+
+                    <div id="accountInputFields" class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <!-- Dynamic fields injected here -->
+                    </div>
+
+                    <!-- Petunjuk ID Tooltip / Help -->
+                    <div class="bg-brand-dark/80 border border-brand-border rounded-xl p-3 flex items-start gap-2 text-xs text-gray-400">
+                        <i class="fa-solid fa-circle-info text-cyan-400 mt-0.5"></i>
+                        <span>Petunjuk: Buka profil game Anda, User ID & Zone ID dapat ditemukan di bawah nama akun profil Anda.</span>
+                    </div>
+                </div>
+
+                <!-- STEP 2: PILIH NOMINAL TOP UP -->
+                <div class="space-y-3">
+                    <div class="flex items-center gap-2">
+                        <span class="w-6 h-6 rounded-full bg-cyan-500 text-slate-950 font-bold text-xs flex items-center justify-center">2</span>
+                        <h4 class="text-sm font-bold text-white uppercase tracking-wider">Pilih Nominal Top Up</h4>
+                    </div>
+
+                    <div id="nominalGrid" class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                        <!-- Dynamic Nominals injected here -->
+                    </div>
+                </div>
+
+                <!-- STEP 3: PILIH METODE PEMBAYARAN -->
+                <div class="space-y-3">
+                    <div class="flex items-center gap-2">
+                        <span class="w-6 h-6 rounded-full bg-cyan-500 text-slate-950 font-bold text-xs flex items-center justify-center">3</span>
+                        <h4 class="text-sm font-bold text-white uppercase tracking-wider">Pilih Metode Pembayaran</h4>
+                    </div>
+
+                    <div id="paymentMethodsArea" class="space-y-3">
+                        <!-- Dynamic Payments injected here -->
+                    </div>
+                </div>
+
+                <!-- STEP 4: NOMOR WHATSAPP -->
+                <div class="space-y-3">
+                    <div class="flex items-center gap-2">
+                        <span class="w-6 h-6 rounded-full bg-cyan-500 text-slate-950 font-bold text-xs flex items-center justify-center">4</span>
+                        <h4 class="text-sm font-bold text-white uppercase tracking-wider">Nomor WhatsApp (Bukti Transaksi)</h4>
+                    </div>
+                    <input type="tel" id="userPhone" placeholder="Contoh: 081234567890" 
+                        class="w-full bg-brand-dark border border-brand-border rounded-xl px-4 py-3 text-white text-sm input-glow">
+                    <p class="text-[11px] text-gray-500">Bukti pembayaran dan pembaruan status transaksi akan dikirimkan otomatis melalui WhatsApp.</p>
+                </div>
+
+            </div>
+
+            <!-- Modal Footer (STEP 5: BUY ACTION) -->
+            <div class="sticky bottom-0 bg-brand-card/95 backdrop-blur border-t border-brand-border p-4 z-20 flex flex-col sm:flex-row items-center justify-between gap-3">
+                <div>
+                    <span class="text-xs text-gray-400 block">Total Pembayaran:</span>
+                    <span id="displayTotalPrice" class="text-xl font-extrabold text-cyan-400 font-display">Rp 0</span>
+                </div>
+                <button onclick="processPurchaseSummary()" class="w-full sm:w-auto px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold rounded-xl shadow-lg shadow-cyan-500/25 transition transform active:scale-95 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-cart-shopping"></i> Beli Sekarang
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- SUMMARY / INVOICE MODAL -->
+    <div id="summaryModal" class="fixed inset-0 z-50 hidden bg-black/85 backdrop-blur-md flex items-center justify-center p-3">
+        <div class="bg-brand-card border border-brand-border rounded-2xl max-w-lg w-full p-6 space-y-6 shadow-2xl relative">
+            
+            <div class="text-center space-y-1">
+                <div class="w-12 h-12 bg-green-500/20 text-green-400 border border-green-500/30 rounded-full flex items-center justify-center mx-auto text-xl mb-2">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white font-display">Konfirmasi Pesanan</h3>
+                <p class="text-xs text-gray-400">Periksa detail pesanan Anda sebelum melakukan konfirmasi</p>
+            </div>
+
+            <div class="bg-brand-dark/90 border border-brand-border rounded-xl p-4 space-y-3 text-xs">
+                <div class="flex justify-between pb-2 border-b border-brand-border/60">
+                    <span class="text-gray-400">No. Invoice</span>
+                    <span id="sumInvoiceId" class="text-cyan-400 font-mono font-bold">RFM-XXXXX</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-gray-400">Game</span>
+                    <span id="sumGameTitle" class="text-white font-semibold">-</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-gray-400">Target Akun</span>
+                    <span id="sumAccountTarget" class="text-white font-semibold">-</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-gray-400">Item Produk</span>
+                    <span id="sumItemName" class="text-white font-semibold">-</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-gray-400">Metode Pembayaran</span>
+                    <span id="sumPaymentMethod" class="text-white font-semibold">-</span>
+                </div>
+                <div class="flex justify-between">
+                    <span class="text-gray-400">No. WhatsApp</span>
+                    <span id="sumPhoneNumber" class="text-white font-semibold">-</span>
+                </div>
+                <div class="flex justify-between pt-2 border-t border-brand-border/60 text-sm font-bold">
+                    <span class="text-gray-300">Total Harga</span>
+                    <span id="sumTotalAmount" class="text-cyan-400 font-display">Rp 0</span>
+                </div>
+            </div>
+
+            <!-- Payment Simulation Note -->
+            <div class="p-3 bg-cyan-950/40 border border-cyan-800/50 rounded-xl text-[11px] text-cyan-300 flex items-center gap-2">
+                <i class="fa-solid fa-bolt text-cyan-400 text-base"></i>
+                <span>Status: <strong class="uppercase text-cyan-400">Siap Diproses Instan (1-3 Detik)</strong> setelah pembayaran terkonfirmasi.</span>
+            </div>
+
+            <div class="flex gap-3">
+                <button onclick="closeSummaryModal()" class="w-1/2 py-2.5 bg-brand-border hover:bg-slate-700 text-gray-300 font-bold rounded-xl text-xs transition">
+                    Batal
+                </button>
+                <button onclick="confirmAndPay()" class="w-1/2 py-2.5 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold rounded-xl text-xs shadow-lg shadow-cyan-500/20 transition">
+                    Bayar Sekarang
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- NOTIFICATION MESSAGES POPUP -->
+    <div id="toast" class="fixed bottom-5 right-5 z-50 hidden bg-cyan-600 text-white px-5 py-3 rounded-xl shadow-2xl flex items-center gap-3 border border-cyan-400 text-sm font-semibold transition transform duration-300">
+        <i class="fa-solid fa-circle-info"></i>
+        <span id="toastMessage">Pesan Notifikasi</span>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-card/90 border-t border-brand-border mt-16 pt-12 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                
+                <!-- About Column -->
+                <div class="space-y-3 md:col-span-1">
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-cyan-500 to-purple-600 flex items-center justify-center font-display font-black text-sm text-white">
+                            RF
+                        </div>
+                        <span class="font-display font-extrabold text-xl text-white">RFM STORE</span>
+                    </div>
+                    <p class="text-xs text-gray-400 leading-relaxed">
+                        RFM STORE adalah platform topup game murah, cepat, dan legal 100%. Layanan pengisian otomatis 24 jam non-stop dengan metode pembayaran terlengkap di Indonesia.
+                    </p>
+                </div>
+
+                <!-- Navigation Links -->
+                <div>
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-3">Peta Situs</h4>
+                    <ul class="space-y-2 text-xs text-gray-400">
+                        <li><a href="#" onclick="switchTab('home')" class="hover:text-cyan-400 transition">Beranda</a></li>
+                        <li><a href="#" onclick="switchTab('cek-transaksi')" class="hover:text-cyan-400 transition">Lacak Pesanan</a></li>
+                        <li><a href="#" onclick="switchTab('promo')" class="hover:text-cyan-400 transition">Promo Terlengkap</a></li>
+                        <li><a href="https://wa.me/6281234567890" target="_blank" class="hover:text-cyan-400 transition">Hubungi CS</a></li>
+                    </ul>
+                </div>
+
+                <!-- Payment Partners -->
+                <div>
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-3">Metode Pembayaran</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2 py-1 bg-slate-800 border border-brand-border rounded text-[10px] text-gray-300 font-bold">QRIS</span>
+                        <span class="px-2 py-1 bg-slate-800 border border-brand-border rounded text-[10px] text-gray-300 font-bold">DANA</span>
+                        <span class="px-2 py-1 bg-slate-800 border border-brand-border rounded text-[10px] text-gray-300 font-bold">GOPAY</span>
+                        <span class="px-2 py-1 bg-slate-800 border border-brand-border rounded text-[10px] text-gray-300 font-bold">OVO</span>
+                        <span class="px-2 py-1 bg-slate-800 border border-brand-border rounded text-[10px] text-gray-300 font-bold">SHOPEEPAY</span>
+                        <span class="px-2 py-1 bg-slate-800 border border-brand-border rounded text-[10px] text-gray-300 font-bold">BCA VA</span>
+                        <span class="px-2 py-1 bg-slate-800 border border-brand-border rounded text-[10px] text-gray-300 font-bold">MANDIRI VA</span>
+                        <span class="px-2 py-1 bg-slate-800 border border-brand-border rounded text-[10px] text-gray-300 font-bold">ALFAMART</span>
+                    </div>
+                </div>
+
+                <!-- Social & Contact -->
+                <div class="space-y-3">
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-3">Ikuti Kami</h4>
+                    <div class="flex space-x-3">
+                        <a href="#" class="w-9 h-9 rounded-xl bg-slate-800 border border-brand-border text-gray-400 hover:text-cyan-400 hover:border-cyan-400 flex items-center justify-center transition">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-9 h-9 rounded-xl bg-slate-800 border border-brand-border text-gray-400 hover:text-cyan-400 hover:border-cyan-400 flex items-center justify-center transition">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                        <a href="https://wa.me/6281234567890" target="_blank" class="w-9 h-9 rounded-xl bg-slate-800 border border-brand-border text-gray-400 hover:text-green-400 hover:border-green-400 flex items-center justify-center transition">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="border-t border-brand-border/60 pt-6 text-center">
+                <p class="text-xs text-gray-500">
+                    &copy; 2026 <strong class="text-cyan-400 font-display">RFM STORE</strong>. Hak Cipta Dilindungi Undang-Undang.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- APPLICATION JAVASCRIPT -->
+    <script>
+        // DATA GAMES CATALOG
+        const gamesData = [
+            {
+                id: 'mlbb',
+                title: 'Mobile Legends',
+                publisher: 'Moonton',
+                icon: 'fa-gamepad',
+                tag: 'INSTAN 1 DETIK',
+                tagColor: 'bg-cyan-500/20 text-cyan-400 border-cyan-500/30',
+                inputs: [
+                    { name: 'userId', placeholder: 'User ID (e.g. 12345678)' },
+                    { name: 'zoneId', placeholder: 'Zone ID (e.g. 1234)' }
+                ],
+                nominals: [
+                    { id: 'ml_86', name: '86 Diamonds', price: 20000, isPromo: true },
+                    { id: 'ml_172', name: '172 Diamonds', price: 40000 },
+                    { id: 'ml_257', name: '257 Diamonds', price: 60000 },
+                    { id: 'ml_706', name: '706 Diamonds', price: 150000 },
+                    { id: 'ml_starlight', name: 'Starlight Member', price: 125000, isHot: true },
+                    { id: 'ml_weekly', name: 'Weekly Diamond Pass', price: 27500, isHot: true }
+                ]
+            },
+            {
+                id: 'ff',
+                title: 'Free Fire',
+                publisher: 'Garena',
+                icon: 'fa-fire-flame-curved',
+                tag: 'PROMO HOT',
+                tagColor: 'bg-red-500/20 text-red-400 border-red-500/30',
+                inputs: [
+                    { name: 'userId', placeholder: 'Masukkan Player ID (e.g. 87654321)' }
+                ],
+                nominals: [
+                    { id: 'ff_140', name: '140 Diamonds', price: 19000 },
+                    { id: 'ff_355', name: '355 Diamonds', price: 47000, isPromo: true },
+                    { id: 'ff_720', name: '720 Diamonds', price: 95000 },
+                    { id: 'ff_1440', name: '1440 Diamonds', price: 190000 },
+                    { id: 'ff_weekly', name: 'Membership Mingguan', price: 28000 }
+                ]
+            },
+            {
+                id: 'genshin',
+                title: 'Genshin Impact',
+                publisher: 'COGNOSPHERE / Hoyoverse',
+                icon: 'fa-wand-magic-sparkles',
+                tag: 'RESMI',
+                tagColor: 'bg-purple-500/20 text-purple-400 border-purple-500/30',
+                inputs: [
+                    { name: 'userId', placeholder: 'UID (e.g. 800123456)' },
+                    { name: 'server', placeholder: 'Pilih Server (Asia/America/Europe)' }
+                ],
+                nominals: [
+                    { id: 'gi_60', name: '60 Genesis Crystals', price: 15000 },
+                    { id: 'gi_300', name: '300+30 Genesis Crystals', price: 75000 },
+                    { id: 'gi_welkin', name: 'Blessing of the Welkin Moon', price: 79000, isHot: true },
+                    { id: 'gi_980', name: '980+110 Genesis Crystals', price: 230000 }
+                ]
+            },
+            {
+                id: 'pubgm',
+                title: 'PUBG Mobile',
+                publisher: 'Level Infinite',
+                icon: 'fa-crosshair',
+                tag: 'POPULER',
+                tagColor: 'bg-amber-500/20 text-amber-400 border-amber-500/30',
+                inputs: [
+                    { name: 'userId', placeholder: 'Masukkan Character ID' }
+                ],
+                nominals: [
+                    { id: 'pubg_60', name: '60 UC', price: 14500 },
+                    { id: 'pubg_325', name: '325 UC', price: 72000 },
+                    { id: 'pubg_660', name: '660 UC', price: 143000, isPromo: true },
+                    { id: 'pubg_rp', name: 'Royale Pass Pack', price: 150000 }
+                ]
+            },
+            {
+                id: 'valorant',
+                title: 'Valorant',
+                publisher: 'Riot Games',
+                icon: 'fa-shield',
+                tag: 'FAST PROCESS',
+                tagColor: 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30',
+                inputs: [
+                    { name: 'userId', placeholder: 'Riot ID + Tag (e.g. Player#1234)' }
+                ],
+                nominals: [
+                    { id: 'val_475', name: '475 VP', price: 52000 },
+                    { id: 'val_1000', name: '1000 VP', price: 105000, isHot: true },
+                    { id: 'val_2050', name: '2050 VP', price: 210000 }
+                ]
+            },
+            {
+                id: 'hok',
+                title: 'Honor of Kings',
+                publisher: 'Level Infinite',
+                icon: 'fa-crown',
+                tag: 'NEW GAME',
+                tagColor: 'bg-blue-500/20 text-blue-400 border-blue-500/30',
+                inputs: [
+                    { name: 'userId', placeholder: 'Player UID' }
+                ],
+                nominals: [
+                    { id: 'hok_80', name: '80 Tokens', price: 15000 },
+                    { id: 'hok_240', name: '240 Tokens', price: 44000 },
+                    { id: 'hok_400', name: '400 Tokens', price: 73000, isHot: true }
+                ]
+            }
+        ];
+
+        // DATA PAYMENT METHODS
+        const paymentCategories = [
+            {
+                category: 'E-Wallet & QRIS',
+                methods: [
+                    { id: 'qris', name: 'QRIS (All E-Wallet & Bank)', fee: 0, badge: 'BEBAS ADMIN' },
+                    { id: 'dana', name: 'DANA', fee: 1000 },
+                    { id: 'gopay', name: 'GoPay', fee: 1000 },
+                    { id: 'shopeepay', name: 'ShopeePay', fee: 1000 }
+                ]
+            },
+            {
+                category: 'Virtual Account (Bank)',
+                methods: [
+                    { id: 'bca_va', name: 'BCA Virtual Account', fee: 2500 },
+                    { id: 'mandiri_va', name: 'Mandiri Virtual Account', fee: 2500 },
+                    { id: 'bri_va', name: 'BRI Virtual Account', fee: 2500 }
+                ]
+            }
+        ];
+
+        // GLOBAL SELECTION STATE
+        let selectedGame = null;
+        let selectedNominal = null;
+        let selectedPayment = null;
+        let activeCarouselIndex = 0;
+        let transactionsStore = {}; // Memory simulated store
+
+        // INITIALIZATION
+        window.addEventListener('DOMContentLoaded', () => {
+            renderGameGrid(gamesData);
+            startCarouselAutoPlay();
+        });
+
+        // RENDER GAME GRID
+        function renderGameGrid(games) {
+            const grid = document.getElementById('gameGrid');
+            grid.innerHTML = '';
+
+            if (games.length === 0) {
+                grid.innerHTML = '<div class="col-span-full text-center py-12 text-gray-400">Game tidak ditemukan.</div>';
+                return;
+            }
+
+            games.forEach(game => {
+                const card = document.createElement('div');
+                card.className = 'bg-brand-card border border-brand-border rounded-2xl p-4 card-hover cursor-pointer flex flex-col justify-between space-y-3 relative overflow-hidden group';
+                card.onclick = () => openTopupModal(game.id);
+
+                card.innerHTML = `
+                    <div class="space-y-2">
+                        <div class="w-full h-24 bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl flex items-center justify-center text-3xl text-cyan-400 group-hover:scale-105 transition">
+                            <i class="fa-solid ${game.icon}"></i>
+                        </div>
+                        <span class="inline-block text-[10px] font-bold px-2 py-0.5 rounded-full border ${game.tagColor}">${game.tag}</span>
+                        <h4 class="font-bold text-sm text-white leading-tight line-clamp-1">${game.title}</h4>
+                        <p class="text-[11px] text-gray-400 leading-none">${game.publisher}</p>
+                    </div>
+                    <div class="pt-2 border-t border-brand-border/40 flex items-center justify-between text-xs text-cyan-400 font-semibold">
+                        <span>Top Up</span>
+                        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // FILTER GAMES BY SEARCH
+        function filterGames(query) {
+            const q = query.toLowerCase();
+            const filtered = gamesData.filter(g => 
+                g.title.toLowerCase().includes(q) || 
+                g.publisher.toLowerCase().includes(q)
+            );
+            renderGameGrid(filtered);
+        }
+
+        // OPEN TOPUP MODAL & POPULATE DATA
+        function openTopupModal(gameId) {
+            selectedGame = gamesData.find(g => g.id === gameId);
+            selectedNominal = null;
+            selectedPayment = null;
+
+            if (!selectedGame) return;
+
+            // Populate Modal Header
+            document.getElementById('modalGameTitle').innerText = selectedGame.title;
+            document.getElementById('modalGamePublisher').innerText = selectedGame.publisher;
+            document.getElementById('modalGameIcon').innerHTML = `<i class="fa-solid ${selectedGame.icon}"></i>`;
+
+            // Populate Step 1 (Input Account)
+            const inputContainer = document.getElementById('accountInputFields');
+            inputContainer.innerHTML = '';
+            selectedGame.inputs.forEach(field => {
+                const inp = document.createElement('input');
+                inp.type = 'text';
+                inp.id = `input_${field.name}`;
+                inp.placeholder = field.placeholder;
+                inp.className = 'w-full bg-brand-dark border border-brand-border rounded-xl px-4 py-3 text-white text-sm input-glow';
+                inputContainer.appendChild(inp);
+            });
+
+            // Populate Step 2 (Nominal Grid)
+            const nominalContainer = document.getElementById('nominalGrid');
+            nominalContainer.innerHTML = '';
+            selectedGame.nominals.forEach(nom => {
+                const item = document.createElement('div');
+                item.className = 'nominal-card border border-brand-border bg-brand-dark p-3 rounded-xl cursor-pointer hover:border-cyan-500 transition relative flex flex-col justify-between';
+                item.onclick = (e) => selectNominal(nom, item);
+
+                let badgeHtml = '';
+                if(nom.isPromo) badgeHtml = `<span class="absolute -top-2 -right-1 bg-red-500 text-white text-[9px] font-bold px-2 py-0.5 rounded-full">PROMO</span>`;
+                if(nom.isHot) badgeHtml = `<span class="absolute -top-2 -right-1 bg-amber-500 text-slate-950 text-[9px] font-bold px-2 py-0.5 rounded-full">BEST</span>`;
+
+                item.innerHTML = `
+                    ${badgeHtml}
+                    <span class="text-xs font-bold text-gray-200 block">${nom.name}</span>
+                    <span class="text-sm font-extrabold text-cyan-400 mt-2 block">Rp ${nom.price.toLocaleString('id-ID')}</span>
+                `;
+                nominalContainer.appendChild(item);
+            });
+
+            // Populate Step 3 (Payment Methods)
+            const paymentContainer = document.getElementById('paymentMethodsArea');
+            paymentContainer.innerHTML = '';
+            paymentCategories.forEach(cat => {
+                const catGroup = document.createElement('div');
+                catGroup.className = 'space-y-2';
+                
+                let methodsHtml = '';
+                cat.methods.forEach(pm => {
+                    methodsHtml += `
+                        <div onclick="selectPayment(${JSON.stringify(pm).replace(/"/g, '&quot;')}, this)" class="payment-card border border-brand-border bg-brand-dark p-3 rounded-xl cursor-pointer hover:border-cyan-500 transition flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-credit-card text-gray-400 text-sm"></i>
+                                <div>
+                                    <span class="text-xs font-bold text-gray-200 block">${pm.name}</span>
+                                    <span class="text-[10px] text-gray-400">Biaya admin: Rp ${pm.fee.toLocaleString('id-ID')}</span>
+                                </div>
+                            </div>
+                            ${pm.badge ? `<span class="text-[9px] font-bold bg-green-500/20 text-green-400 border border-green-500/30 px-2 py-0.5 rounded">${pm.badge}</span>` : ''}
+                        </div>
+                    `;
+                });
+
+                catGroup.innerHTML = `
+                    <h5 class="text-xs font-bold text-gray-400 uppercase tracking-wide">${cat.category}</h5>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">${methodsHtml}</div>
+                `;
+                paymentContainer.appendChild(catGroup);
+            });
+
+            updateTotalPriceDisplay();
+
+            // Show Modal
+            document.getElementById('topupModal').classList.remove('hidden');
+        }
+
+        function closeTopupModal() {
+            document.getElementById('topupModal').classList.add('hidden');
+        }
+
+        // SELECT NOMINAL HANDLER
+        function selectNominal(nomObj, element) {
+            selectedNominal = nomObj;
+            document.querySelectorAll('.nominal-card').forEach(el => {
+                el.classList.remove('border-cyan-500', 'bg-cyan-500/10');
+            });
+            element.classList.add('border-cyan-500', 'bg-cyan-500/10');
+            updateTotalPriceDisplay();
+        }
+
+        // SELECT PAYMENT HANDLER
+        function selectPayment(pmObj, element) {
+            selectedPayment = pmObj;
+            document.querySelectorAll('.payment-card').forEach(el => {
+                el.classList.remove('border-cyan-500', 'bg-cyan-500/10');
+            });
+            element.classList.add('border-cyan-500', 'bg-cyan-500/10');
+            updateTotalPriceDisplay();
+        }
+
+        function updateTotalPriceDisplay() {
+            let total = 0;
+            if (selectedNominal) total += selectedNominal.price;
+            if (selectedPayment) total += selectedPayment.fee;
+            
+            document.getElementById('displayTotalPrice').innerText = `Rp ${total.toLocaleString('id-ID')}`;
+        }
+
+        // PROCESS PURCHASE & SHOW SUMMARY INVOICE
+        function processPurchaseSummary() {
+            // Validation
+            if (!selectedGame) return;
+
+            let accountTarget = '';
+            let inputsValid = true;
+            selectedGame.inputs.forEach(inp => {
+                const el = document.getElementById(`input_${inp.name}`);
+                if (!el || !el.value.trim()) {
+                    inputsValid = false;
+                } else {
+                    accountTarget += (accountTarget ? ' / ' : '') + el.value.trim();
+                }
+            });
+
+            if (!inputsValid) {
+                showToast('Mohon lengkapi data akun Anda!');
+                return;
+            }
+
+            if (!selectedNominal) {
+                showToast('Silakan pilih nominal top up!');
+                return;
+            }
+
+            if (!selectedPayment) {
+                showToast('Silakan pilih metode pembayaran!');
+                return;
+            }
+
+            const phone = document.getElementById('userPhone').value.trim();
+            if (!phone) {
+                showToast('Masukkan nomor WhatsApp Anda!');
+                return;
+            }
+
+            // Generate Mock Invoice ID
+            const invoiceId = 'RFM-' + Date.now().toString().slice(-8);
+            const totalAmount = selectedNominal.price + selectedPayment.fee;
+
+            // Fill Summary Modal
+            document.getElementById('sumInvoiceId').innerText = invoiceId;
+            document.getElementById('sumGameTitle').innerText = selectedGame.title;
+            document.getElementById('sumAccountTarget').innerText = accountTarget;
+            document.getElementById('sumItemName').innerText = selectedNominal.name;
+            document.getElementById('sumPaymentMethod').innerText = selectedPayment.name;
+            document.getElementById('sumPhoneNumber').innerText = phone;
+            document.getElementById('sumTotalAmount').innerText = `Rp ${totalAmount.toLocaleString('id-ID')}`;
+
+            // Store Transaction to In-Memory
+            transactionsStore[invoiceId] = {
+                id: invoiceId,
+                game: selectedGame.title,
+                account: accountTarget,
+                item: selectedNominal.name,
+                payment: selectedPayment.name,
+                total: totalAmount,
+                status: 'Sukses (Instan)',
+                date: new Date().toLocaleString('id-ID')
+            };
+
+            // Switch Modals
+            closeTopupModal();
+            document.getElementById('summaryModal').classList.remove('hidden');
+        }
+
+        function closeSummaryModal() {
+            document.getElementById('summaryModal').classList.add('hidden');
+        }
+
+        // CONFIRM PAYMENT
+        function confirmAndPay() {
+            const invoiceId = document.getElementById('sumInvoiceId').innerText;
+            closeSummaryModal();
+            
+            showToast('Transaksi Berhasil! Pesanan sedang diproses instan.');
+            
+            // Switch to Check Transaction Tab & Auto Fill
+            switchTab('cek-transaksi');
+            document.getElementById('invoiceCheckInput').value = invoiceId;
+            checkInvoiceStatus();
+        }
+
+        // CHECK INVOICE STATUS
+        function checkInvoiceStatus() {
+            const query = document.getElementById('invoiceCheckInput').value.trim();
+            const area = document.getElementById('invoiceResultArea');
+
+            if (!query) {
+                showToast('Masukkan nomor invoice terlebih dahulu!');
+                return;
+            }
+
+            area.classList.remove('hidden');
+
+            if (transactionsStore[query]) {
+                const tx = transactionsStore[query];
+                area.innerHTML = `
+                    <div class="bg-brand-dark/90 border border-green-500/40 rounded-xl p-4 space-y-3 text-xs">
+                        <div class="flex items-center justify-between pb-2 border-b border-brand-border">
+                            <span class="text-gray-400">Status Pesanan</span>
+                            <span class="px-2.5 py-1 bg-green-500/20 text-green-400 font-bold rounded-full border border-green-500/30 flex items-center gap-1">
+                                <i class="fa-solid fa-circle-check"></i> ${tx.status}
+                            </span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-400">Invoice ID</span>
+                            <span class="text-white font-mono font-bold">${tx.id}</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-400">Game</span>
+                            <span class="text-white">${tx.game}</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-400">ID Akun</span>
+                            <span class="text-white">${tx.account}</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-400">Item Produk</span>
+                            <span class="text-white">${tx.item}</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-gray-400">Waktu Transaksi</span>
+                            <span class="text-gray-300">${tx.date}</span>
+                        </div>
+                    </div>
+                `;
+            } else {
+                area.innerHTML = `
+                    <div class="bg-red-500/10 border border-red-500/30 rounded-xl p-4 text-center text-xs text-red-400">
+                        <i class="fa-solid fa-triangle-exclamation text-xl mb-2 block"></i>
+                        Nomor Invoice <strong>${query}</strong> tidak ditemukan. Pastikan Anda memasukkan nomor transaksi yang benar.
+                    </div>
+                `;
+            }
+        }
+
+        // TAB SWITCHING NAVIGATION
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.add('hidden');
+            });
+            document.getElementById(`tab-${tabId}`).classList.remove('hidden');
+
+            // Scroll top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // HERO CAROUSEL LOGIC
+        function startCarouselAutoPlay() {
+            setInterval(() => {
+                nextSlide();
+            }, 5000);
+        }
+
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.carousel-item');
+            slides.forEach((slide, idx) => {
+                if (idx === index) {
+                    slide.classList.remove('opacity-0');
+                    slide.classList.add('opacity-100');
+                } else {
+                    slide.classList.remove('opacity-100');
+                    slide.classList.add('opacity-0');
+                }
+            });
+        }
+
+        function nextSlide() {
+            const slides = document.querySelectorAll('.carousel-item');
+            activeCarouselIndex = (activeCarouselIndex + 1) % slides.length;
+            showSlide(activeCarouselIndex);
+        }
+
+        function prevSlide() {
+            const slides = document.querySelectorAll('.carousel-item');
+            activeCarouselIndex = (activeCarouselIndex - 1 + slides.length) % slides.length;
+            showSlide(activeCarouselIndex);
+        }
+
+        // MOBILE MENU TOGGLE
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // CUSTOM TOAST NOTIFICATION
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toastMessage');
+            toastMsg.innerText = msg;
+            
+            toast.classList.remove('hidden');
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
